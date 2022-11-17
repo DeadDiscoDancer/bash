@@ -1,0 +1,3 @@
+for dir in /home/reports/*; do (cd "$dir" && pwd && export CWD=$(basename "$PWD") && echo $CWD && mkdir /home/c4t_appserver/instance/reports/CUR/$CWD/ || cp -prv *CU*.* /home/c4t_appserver/instance/reports/CUR/$CWD/); done
+for dir in /home/reports/*; do (cd "$dir" && pwd && export CWD=$(basename "$PWD") && echo $CWD && mkdir /home/c4t_appserver/instance/reports/EQ/$CWD/ || cp -prv *SEM*.* /home/c4t_appserver/instance/reports/EQ/$CWD/); done
+for dir in /home/reports/*; do (cd "$dir" && pwd && export CWD=$(basename "$PWD") && echo $CWD && mkdir /home/c4t_appserver/instance/reports/FO/$CWD/ || cp -prv *.csv /home/c4t_appserver/instance/reports/FO/$CWD/); done
